@@ -1,0 +1,3981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>M/S Narottam Chaturvedi & SHRI SIDH TRANSFORMER & ENGINEERING | Energy & Infrastructure</title>
+
+    <meta name="description"
+          content="Narottam Chaturvedi Construction & Electrical Infrastructure and SHRI SIDH TRANSFORMER & ENGINEERING Solar & Transformer Solutions.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+		
+		/* =========================
+   LEFT + RIGHT HERO
+========================= */
+
+.split-hero {
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    overflow: hidden;
+
+    background: #e1e9f1;
+}
+
+
+/* LEFT STATIC */
+
+.split-left {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+}
+
+.split-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+/* RIGHT SLIDER */
+
+.split-right {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background: #dce6ef;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.split-right > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    display: block;
+
+    transition: opacity .6s ease;
+}
+
+
+/* =========================
+   ARROWS
+========================= */
+
+.split-right .slider-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(7,59,112,.7);
+
+    color: white;
+
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+.split-right .slider-arrow:hover {
+    background: #f5b600;
+    color: #073b70;
+}
+
+.split-right .slider-left {
+    left: 20px;
+}
+
+.split-right .slider-right {
+    right: 20px;
+}
+
+
+/* =========================
+   DOTS
+========================= */
+
+.split-right .slider-dots {
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    display: flex;
+
+    gap: 8px;
+}
+
+.slider-dot {
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    background: white;
+
+    cursor: pointer;
+}
+
+.slider-dot.active {
+    background: #f5b600;
+    border-color: #f5b600;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px) {
+
+    .split-hero {
+        height: auto;
+
+        grid-template-columns: 1fr;
+    }
+
+    .split-left,
+    .split-right {
+        height: 400px;
+    }
+
+}
+		
+		
+		/* =========================
+   HEADER
+========================= */
+
+.top-header {
+    background: #ffffff;
+    padding: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 8px 0;
+}
+
+
+/* NEW COMPANY IMAGE */
+
+.company-banner {
+    flex: 1;
+    min-width: 0;
+}
+
+.company-banner img {
+    width: 100%;
+    max-height: 125px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+}
+
+
+/* CONTACT */
+
+.contact-top {
+    width: 390px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    font-size: 13px;
+    color: #073b70;
+}
+
+.contact-top div {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.contact-icon {
+    color: #f2b000;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+
+/* TRUSTED PARTNER */
+
+.tagline {
+    width: 180px;
+    flex-shrink: 0;
+
+    text-align: center;
+
+    color: #073b70;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    font-style: italic;
+
+    line-height: 1.4;
+}
+		/* =========================
+   EXCEL PROJECTS
+========================= */
+
+.excel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #dce5ee;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    padding: 10px;
+}
+
+.excel-frame {
+    width: 100%;
+    height: 750px;
+    border: none;
+    display: block;
+}
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: #102f57;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1400px, 92%);
+            margin: auto;
+        }
+
+        /* =========================
+           TOP BRAND HEADER
+        ========================== */
+
+        .top-header {
+            background: #ffffff;
+            padding: 15px 0;
+            border-bottom: 1px solid #e7edf4;
+        }
+
+        .brand-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .company {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+        }
+
+        .company-logo {
+            width: 82px;
+            height: 70px;
+            object-fit: contain;
+        }
+
+        .company-info h2 {
+            font-family: "Poppins", sans-serif;
+            color: #07386c;
+            font-size: 25px;
+            line-height: 1.1;
+            font-weight: 800;
+        }
+
+        .company-info p {
+            color: #555;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        .company-info span {
+            display: block;
+            color: #174c7e;
+            font-size: 12px;
+            font-style: italic;
+            margin-top: 2px;
+        }
+
+        .brand-divider {
+            width: 2px;
+            height: 65px;
+            background: #d8e0e9;
+        }
+
+        .contact-top {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-size: 13px;
+            min-width: 210px;
+        }
+
+        .contact-top div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-icon {
+            color: #e6a900;
+            font-weight: 700;
+        }
+
+        .tagline {
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+            color: #0b3d71;
+            font-size: 19px;
+            font-style: italic;
+            font-weight: 600;
+            max-width: 190px;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        .navbar {
+            background: #073b70;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,.12);
+        }
+
+        .nav-inner {
+            min-height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 17px 22px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: #f4b900;
+            color: #082f58;
+        }
+
+        .quote-btn {
+            background: #f4b900;
+            color: #082f58;
+            padding: 11px 22px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 13px;
+            transition: .3s;
+        }
+
+        .quote-btn:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        /* =========================
+   HERO IMAGE SLIDER
+========================= */
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #dce6ef;
+    overflow: hidden;
+}
+
+.hero-slide {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    background: #dce6ef;
+
+    transition: opacity 0.6s ease;
+}
+
+
+/* ARROWS */
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 20;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(7,59,112,.65);
+
+    color: white;
+    font-size: 45px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.slider-arrow:hover {
+    background: #f5b600;
+    color: #073b70;
+}
+
+.slider-left {
+    left: 30px;
+}
+
+.slider-right {
+    right: 30px;
+}
+
+
+/* DOTS */
+
+.slider-dots {
+    position: absolute;
+
+    bottom: 125px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 25;
+
+    display: flex;
+    gap: 9px;
+}
+
+.slider-dot {
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    background: white;
+
+    opacity: .7;
+
+    cursor: pointer;
+}
+
+.slider-dot.active {
+    background: #f5b600;
+    border-color: #f5b600;
+    opacity: 1;
+}
+
+
+/* FEATURE STRIP */
+
+.hero-slider .values {
+    position: absolute;
+
+    z-index: 30;
+
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(1100px, 90%);
+
+    background: rgba(255,255,255,.97);
+
+    display: grid;
+
+    grid-template-columns: repeat(5,1fr);
+
+    border-radius: 15px 15px 0 0;
+
+    box-shadow: 0 -5px 25px rgba(0,0,0,.12);
+
+    overflow: hidden;
+}
+
+.hero-slider .value {
+    padding: 18px 10px;
+
+    text-align: center;
+
+    border-right: 1px solid #ddd;
+}
+
+.hero-slider .value:last-child {
+    border-right: none;
+}
+
+.hero-slider .value-icon {
+    width: 42px;
+    height: 42px;
+
+    margin: auto auto 8px;
+
+    background: #083d72;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 19px;
+}
+
+.hero-slider .value strong {
+    display: block;
+
+    color: #073b70;
+
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px) {
+
+    .brand-header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .company-banner {
+        width: 100%;
+        flex: 100%;
+    }
+
+    .company-banner img {
+        max-height: 100px;
+        object-position: center;
+    }
+
+    .contact-top {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tagline {
+        width: 100%;
+        font-size: 15px;
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .hero-slider {
+        height: 650px;
+    }
+
+    .hero-slide img {
+        object-fit: contain;
+    }
+
+    .slider-arrow {
+        width: 42px;
+        height: 42px;
+        font-size: 30px;
+    }
+
+    .slider-left {
+        left: 10px;
+    }
+
+    .slider-right {
+        right: 10px;
+    }
+
+    .hero-slider .values {
+        width: 95%;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .hero-slider .value {
+        padding: 12px 5px;
+    }
+
+    .hero-slider .value:nth-child(2) {
+        border-right: none;
+    }
+
+    .hero-slider .value:nth-child(3),
+    .hero-slider .value:nth-child(4),
+    .hero-slider .value:nth-child(5) {
+        border-top: 1px solid #ddd;
+    }
+
+    .slider-dots {
+        bottom: 175px;
+    }
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(5,45,80,.30),
+            rgba(5,45,80,.20)
+        );
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    padding: 30px 60px 160px;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.hero-content h1 {
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        28px,
+        3.4vw,
+        55px
+    );
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    color: white;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 3px 8px rgba(0,0,0,.65);
+
+    max-width: 1600px;
+
+    margin: auto;
+}
+
+
+.hero-content h1 span {
+    color: #f5b600;
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.hero-subtitle {
+
+    margin-top: 12px;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    letter-spacing: .7px;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.7);
+}
+
+
+.hero-subtitle b {
+
+    color: #f5b600;
+
+    margin: 0 8px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-description {
+
+    margin: 15px auto 25px;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    font-weight: 500;
+
+    color: white;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.7);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.btn-primary {
+
+    display: inline-block;
+
+    background: #f5b600;
+
+    color: #073b70;
+
+    padding: 13px 28px;
+
+    border-radius: 8px;
+
+    font-weight: 800;
+
+    transition: .3s;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.2);
+}
+
+
+.btn-primary:hover {
+
+    background: white;
+
+    transform: translateY(-3px);
+}
+
+
+.btn-outline {
+
+    display: inline-block;
+
+    border: 2px solid white;
+
+    color: white;
+
+    padding: 11px 27px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    background: rgba(0,0,0,.15);
+
+    transition: .3s;
+}
+
+
+.btn-outline:hover {
+
+    background: white;
+
+    color: #073b70;
+}
+
+
+/* =========================
+   SLIDER ARROWS
+========================= */
+
+.slider-arrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    width: 60px;
+
+    height: 60px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(5,55,95,.55);
+
+    color: white;
+
+    font-size: 45px;
+
+    line-height: 45px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.slider-arrow:hover {
+
+    background: #f5b600;
+
+    color: #073b70;
+
+}
+
+
+.slider-left {
+
+    left: 30px;
+}
+
+
+.slider-right {
+
+    right: 30px;
+}
+
+
+/* =========================
+   SLIDER DOTS
+========================= */
+
+.slider-dots {
+
+    position: absolute;
+
+    z-index: 10;
+
+    bottom: 125px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.slider-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+.slider-dot.active {
+
+    background: #f5b600;
+
+    border-color: #f5b600;
+}
+
+
+/* =========================
+   VALUES STRIP
+========================= */
+
+.hero-slider .values {
+
+    position: absolute;
+
+    z-index: 20;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(1100px, 90%);
+
+    background: rgba(255,255,255,.97);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    box-shadow:
+        0 -3px 20px rgba(0,0,0,.12);
+
+    border-radius:
+        15px 15px 0 0;
+
+    overflow: hidden;
+}
+
+
+.hero-slider .value {
+
+    padding: 18px 10px;
+
+    text-align: center;
+
+    border-right:
+        1px solid #ddd;
+}
+
+
+.hero-slider .value:last-child {
+
+    border-right: none;
+}
+
+
+.hero-slider .value-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    margin:
+        auto auto 8px;
+
+    background: #083d72;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 19px;
+}
+/* =========================
+   HERO SLIDER
+========================= */
+
+.hero-slider {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 600px;
+
+    background: #dce6ef;
+
+    overflow: hidden;
+
+}
+
+
+/* IMAGE */
+
+.hero-slide {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.hero-slide img {
+
+    width: 100%;
+
+    height: 100%;
+
+    /*
+       IMPORTANT:
+       Puri image dikhegi.
+       Koi part crop nahi hoga.
+    */
+
+    object-fit: contain;
+
+    object-position: center;
+
+    background: #dce6ef;
+
+    transition: opacity .6s ease;
+
+}
+
+
+/* =========================
+   ARROWS
+========================= */
+
+.slider-arrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    width: 60px;
+
+    height: 60px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(7,59,112,.65);
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.slider-arrow:hover {
+
+    background: #f5b600;
+
+    color: #073b70;
+
+}
+
+
+.slider-left {
+
+    left: 30px;
+
+}
+
+
+.slider-right {
+
+    right: 30px;
+
+}
+
+
+/* =========================
+   DOTS
+========================= */
+
+.slider-dots {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.slider-dot {
+
+    width: 11px;
+
+    height: 11px;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+}
+
+
+.slider-dot.active {
+
+    background: #f5b600;
+
+    border-color: #f5b600;
+
+}
+
+
+/* =========================
+   FEATURE STRIP
+========================= */
+
+.hero-features {
+
+    width: min(1100px, 90%);
+
+    margin: -1px auto 0;
+
+    background: rgba(255,255,255,.98);
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    border-radius: 15px 15px 0 0;
+
+    box-shadow:
+        0 -4px 20px rgba(0,0,0,.12);
+
+    overflow: hidden;
+
+    position: relative;
+
+    z-index: 20;
+
+}
+
+
+.hero-features .value {
+
+    padding: 18px 10px;
+
+    text-align: center;
+
+    border-right: 1px solid #ddd;
+
+}
+
+
+.hero-features .value:last-child {
+
+    border-right: none;
+
+}
+
+
+.hero-features .value-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    margin: auto auto 8px;
+
+    background: #083d72;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 19px;
+
+}
+
+
+.hero-features .value strong {
+
+    display: block;
+
+    color: #073b70;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    .hero-slider {
+
+        height: 450px;
+
+    }
+
+
+    .hero-slide img {
+
+        object-fit: contain;
+
+    }
+
+
+    .slider-arrow {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 30px;
+
+    }
+
+
+    .slider-left {
+
+        left: 10px;
+
+    }
+
+
+    .slider-right {
+
+        right: 10px;
+
+    }
+
+
+    .hero-features {
+
+        width: 95%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .hero-features .value {
+
+        padding: 12px 5px;
+
+    }
+
+
+    .hero-features .value:nth-child(2) {
+
+        border-right: none;
+
+    }
+
+
+    .hero-features .value:nth-child(3),
+    .hero-features .value:nth-child(4),
+    .hero-features .value:nth-child(5) {
+
+        border-top: 1px solid #ddd;
+
+    }
+
+}
+
+
+.hero-slider .value strong {
+
+    font-size: 13px;
+
+    display: block;
+
+    color: #073b70;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1000px) {
+
+    .hero-slider {
+        height: 560px;
+    }
+
+    .hero-content {
+        padding:
+            20px
+            40px
+            150px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    .hero-slider {
+
+        height: 650px;
+
+    }
+
+
+    .hero-slide img {
+
+        object-fit: contain;
+
+    }
+
+
+    .hero-content {
+
+        padding:
+            30px
+            15px
+            180px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .hero-subtitle {
+
+        font-size: 11px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 12px;
+
+    }
+
+
+    .btn-primary,
+    .btn-outline {
+
+        padding:
+            10px
+            16px;
+
+        font-size: 12px;
+
+    }
+
+
+    .slider-arrow {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 30px;
+
+    }
+
+
+    .slider-left {
+
+        left: 10px;
+
+    }
+
+
+    .slider-right {
+
+        right: 10px;
+
+    }
+
+
+    .hero-slider .values {
+
+        width: 95%;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .hero-slider .value {
+
+        padding: 12px 5px;
+
+    }
+
+
+    .hero-slider .value:nth-child(2) {
+
+        border-right: none;
+
+    }
+
+
+    .hero-slider .value:nth-child(3),
+    .hero-slider .value:nth-child(4),
+    .hero-slider .value:nth-child(5) {
+
+        border-top: 1px solid #ddd;
+
+    }
+
+
+    .slider-dots {
+
+        bottom: 175px;
+
+    }
+
+}
+
+        .hero h1 .yellow {
+            color: #f7b500;
+        }
+
+        .hero-subtitle {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 12px;
+            letter-spacing: 1px;
+        }
+
+        .hero-description {
+            color: white;
+            font-size: 18px;
+            max-width: 750px;
+            margin: 15px auto 30px;
+            font-style: italic;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #f5b600;
+            color: #082f58;
+            padding: 13px 28px;
+            border-radius: 7px;
+            font-weight: 800;
+            transition: .3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: white;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            padding: 11px 27px;
+            border-radius: 7px;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #073b70;
+        }
+
+        /* =========================
+           VALUES STRIP
+        ========================== */
+
+        .values {
+            background: rgba(255,255,255,.96);
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(1100px, 90%);
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            box-shadow: 0 -3px 20px rgba(0,0,0,.08);
+            border-radius: 15px 15px 0 0;
+            overflow: hidden;
+        }
+
+        .value {
+            padding: 18px 10px;
+            text-align: center;
+            border-right: 1px solid #ddd;
+        }
+
+        .value:last-child {
+            border: none;
+        }
+
+        .value-icon {
+            width: 42px;
+            height: 42px;
+            margin: auto auto 8px;
+            background: #083d72;
+            color: white;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 19px;
+        }
+
+        .value strong {
+            font-size: 13px;
+            display: block;
+        }
+
+        /* =========================
+           COMPANY SECTIONS
+        ========================== */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .companies {
+            padding-top: 110px;
+        }
+
+        .company-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .company-card {
+            padding: 35px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #dce7f2;
+        }
+
+        .company-card.nc {
+            background: linear-gradient(135deg, #fffdf7, #f8f8f8);
+        }
+
+        .company-card.sx {
+            background: linear-gradient(135deg, #eef8ff, #f7fbff);
+        }
+
+        .company-card-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding-bottom: 22px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #cdd9e5;
+        }
+
+        .company-card-logo {
+            width: 72px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .company-card h2 {
+            color: #073b70;
+            font-family: "Poppins", sans-serif;
+            font-size: 24px;
+        }
+
+        .company-card h3 {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .company-card p {
+            color: #364d67;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .service-list {
+            list-style: none;
+            display: grid;
+            gap: 10px;
+        }
+
+        .service-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .service-list li span {
+            width: 28px;
+            height: 28px;
+            background: #073b70;
+            color: white;
+            border-radius: 6px;
+            display: grid;
+            place-items: center;
+            font-size: 12px;
+        }
+
+        /* =========================
+           SECTION TITLE
+        ========================== */
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 34px;
+            color: #073b70;
+            font-weight: 800;
+        }
+
+        .section-title h2::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: #f5b600;
+            margin: 12px auto;
+            border-radius: 5px;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: auto;
+            color: #66788d;
+        }
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .services {
+            background: #f5f8fb;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 13px;
+        }
+
+        .service-box {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(13,52,88,.09);
+            transition: .3s;
+        }
+
+        .service-box:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(13,52,88,.15);
+        }
+
+        .service-image {
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .construction {
+            background-image: url("images/construction.jpg");
+        }
+
+        .transmission {
+            background-image: url("images/transmission.jpg");
+        }
+
+        .substation {
+            background-image: url("images/substation.jpg");
+        }
+
+        .colony {
+            background-image: url("images/colony.jpg");
+        }
+
+        .solar {
+            background-image: url("images/solar.jpg");
+        }
+
+        .transformer {
+            background-image: url("images/transformer.jpg");
+        }
+
+        .service-content {
+            padding: 17px;
+            background: #07508d;
+            color: white;
+            min-height: 105px;
+        }
+
+        .service-content h3 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .service-content p {
+            font-size: 11px;
+            opacity: .9;
+        }
+
+        /* =========================
+           WHY US
+        ========================== */
+
+        .why-us {
+            background: linear-gradient(100deg, #063b6e, #075596);
+            color: white;
+        }
+
+        .why-us .section-title h2 {
+            color: white;
+        }
+
+        .why-us .section-title p {
+            color: #dce9f5;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .why-box {
+            text-align: center;
+            padding: 25px 15px;
+            border-right: 1px solid rgba(255,255,255,.2);
+        }
+
+        .why-icon {
+            width: 65px;
+            height: 65px;
+            border: 2px solid #f5b600;
+            border-radius: 50%;
+            margin: auto auto 15px;
+            display: grid;
+            place-items: center;
+            font-size: 25px;
+            color: #f5b600;
+        }
+
+        .why-box h3 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .why-box p {
+            font-size: 12px;
+            color: #d5e2ef;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        .projects {
+            background: white;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .project-card {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e0e7ee;
+            background: white;
+            transition: .3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            color: #073b70;
+            font-size: 18px;
+        }
+
+        .project-info p {
+            color: #68798c;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            background: #f4f8fc;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 420px;
+            background:
+                linear-gradient(rgba(0,50,95,.15), rgba(0,50,95,.15)),
+                url("images/hero.jpg") center/cover;
+            border-radius: 15px;
+        }
+
+        .about-text h2 {
+            font-family: "Poppins";
+            color: #073b70;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #53677d;
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .check-list li {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #f0ae00;
+            font-weight: 900;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            background: #ffffff;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-info {
+            background: #073b70;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .contact-info h2 {
+            font-family: "Poppins";
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item-icon {
+            color: #f5b600;
+            font-size: 20px;
+        }
+
+        .contact-item strong {
+            display: block;
+        }
+
+        .contact-item span {
+            color: #d6e3ef;
+            font-size: 14px;
+        }
+
+        .contact-form {
+            padding: 40px;
+            border: 1px solid #e0e7ef;
+            border-radius: 12px;
+        }
+
+        .contact-form h2 {
+            color: #073b70;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #d5dee8;
+            border-radius: 7px;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #0b5594;
+        }
+
+        .submit-btn {
+            border: none;
+            background: #f4b500;
+            color: #073b70;
+            padding: 13px 28px;
+            border-radius: 7px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #062e55;
+            color: white;
+        }
+
+        .footer-main {
+            padding: 50px 0;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand h2 {
+            font-family: "Poppins";
+            margin-bottom: 10px;
+        }
+
+        .footer-brand p {
+            color: #c6d5e3;
+            font-size: 13px;
+            max-width: 350px;
+        }
+
+        .footer-column h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #f5b600;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #d2dfeb;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .footer-column a:hover {
+            color: #f5b600;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.15);
+            padding: 18px 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #bdccda;
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        .mobile-menu {
+            display: none;
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        @media(max-width:1100px) {
+
+            .service-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .values {
+                width: 95%;
+            }
+
+            .tagline {
+                display: none;
+            }
+
+        }
+
+        @media(max-width:800px) {
+
+            .brand-header {
+                flex-wrap: wrap;
+            }
+
+            .brand-divider {
+                display: none;
+            }
+
+            .contact-top {
+                width: 100%;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-inner {
+                padding: 10px 0;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 58px;
+                left: 0;
+                width: 100%;
+                background: #073b70;
+                flex-direction: column;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li,
+            .nav-links a {
+                width: 100%;
+            }
+
+            .nav-links a {
+                padding: 14px 20px;
+            }
+
+            .quote-btn {
+                display: none;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .values {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .value:nth-child(2) {
+                border-right: none;
+            }
+
+            .value:nth-child(3),
+            .value:nth-child(4),
+            .value:nth-child(5) {
+                border-top: 1px solid #ddd;
+            }
+
+            .company-cards,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-box {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,.2);
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media(max-width:550px) {
+
+            .company-info h2 {
+                font-size: 18px;
+            }
+
+            .company-logo {
+                width: 60px;
+                height: 55px;
+            }
+
+            .company-info p {
+                font-size: 10px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero-subtitle {
+                font-size: 13px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .companies {
+                padding-top: 100px;
+            }
+
+            .service-grid,
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 8px;
+            }
+			/* =========================
+   PROJECT FILTERS
+========================= */
+
+.project-filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    border: 1px solid #d5e0eb;
+    background: white;
+    color: #073b70;
+    padding: 10px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #073b70;
+    color: white;
+    border-color: #073b70;
+}
+
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #e1e8ef;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 45, 85, .08);
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 45, 85, .15);
+}
+
+.project-image {
+    height: 210px;
+    background: linear-gradient(
+        135deg,
+        #073b70,
+        #0b609c
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 45px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-details {
+    padding: 20px;
+}
+
+.project-details h3 {
+    color: #073b70;
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.project-location {
+    color: #68798c;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.project-work {
+    color: #455c73;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.project-status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #eaf5ea;
+    color: #23752d;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.project-status.ongoing {
+    background: #fff5d8;
+    color: #9a6900;
+}
+.excel-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #dce5ee;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    padding: 10px;
+}
+
+.excel-frame {
+    width: 100%;
+    min-height: 600px;
+    border: none;
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px) {
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width:550px) {
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+            .company-card {
+                padding: 22px;
+            }
+
+        }
+/* =========================
+   FINAL SPLIT HERO FIX
+========================= */
+
+.split-hero {
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    overflow: hidden;
+    background: #e1e9f1;
+}
+
+/* LEFT IMAGE */
+.split-left {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.split-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+}
+
+/* RIGHT IMAGE */
+.split-right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #dce6ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.split-right > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+/* =========================
+   MOBILE HERO FIX
+========================= */
+
+@media (max-width: 700px) {
+
+    .split-hero {
+        width: 100%;
+        height: auto;
+        display: block;
+        overflow: hidden;
+    }
+
+    /* LEFT - OUR OBJECTIVE */
+    .split-left {
+        width: 100%;
+        height: auto;
+        background: #ffffff;
+        display: block;
+        overflow: hidden;
+    }
+
+    .split-left img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    /* RIGHT - CERTIFICATE SLIDER */
+    .split-right {
+        width: 100%;
+        height: 300px;
+        background: #dce6ef;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .split-right > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    /* MOBILE ARROWS */
+    .split-right .slider-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 32px;
+    }
+
+    .split-right .slider-left {
+        left: 10px;
+    }
+
+    .split-right .slider-right {
+        right: 10px;
+    }
+
+    .split-right .slider-dots {
+        bottom: 10px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     TOP HEADER
+========================== -->
+
+<header class="top-header">
+
+    <div class="container brand-header">
+
+        <!-- NEW COMPANY BANNER -->
+        <div class="company-banner">
+            <img
+                src="images/company-header.jpg"
+                alt="Narottam Chaturvedi and Shri Sidh Transformer"
+            >
+        </div>
+
+
+        <!-- CONTACT DETAILS - SAME RAHENGE -->
+        <div class="contact-top">
+
+            <div>
+                <span class="contact-icon">☎</span>
+                +91 8839869336 / +91 9685593179
+            </div>
+
+            <div>
+                <span class="contact-icon">✉</span>
+                shrisidhtransformer@gmail.com / chaturvedinarottam623@gmail.com
+            </div>
+
+            <div>
+                <span class="contact-icon">📍</span>
+                INFRONT OF CIVIL LINE 33/11 KV SS
+                BESIDE PRATHAM HOTEL
+                SATNA 485001
+            </div>
+
+        </div>
+
+
+        <!-- TRUSTED PARTNER - SAME RAHEGA -->
+        <div class="tagline">
+
+            Your Trusted<br>
+            Partner<br>
+            in Energy &<br>
+            Infrastructure
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     NAVBAR
+========================== -->
+
+<nav class="navbar">
+
+    <div class="container nav-inner">
+
+        <div class="mobile-menu" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="#home" class="active">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About Us</a>
+            </li>
+
+            <li>
+                <a href="#services">Our Services</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#gallery">Gallery</a>
+            </li>
+
+            <li>
+                <a href="#certifications">Certifications</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact Us</a>
+            </li>
+
+        </ul>
+
+        <a href="#contact" class="quote-btn">
+            Get a Quote →
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<!-- =========================
+     HERO IMAGE SLIDER
+========================== -->
+
+<section class="split-hero" id="home">
+
+    <!-- LEFT: STATIC IMAGE -->
+    <div class="split-left">
+        <img
+            src="images/hero3.jpg"
+            alt="Our Objective"
+        >
+    </div>
+
+
+    <!-- RIGHT: AUTO SLIDER -->
+    <div class="split-right">
+
+        <img
+            id="heroImage"
+            src="images/hero1.jpg"
+            alt="Project"
+        >
+
+        <button
+            class="slider-arrow slider-left"
+            onclick="previousHero()">
+            ‹
+        </button>
+
+        <button
+            class="slider-arrow slider-right"
+            onclick="nextHero()">
+            ›
+        </button>
+
+        <div
+            class="slider-dots"
+            id="sliderDots">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<div class="hero-features">
+
+    <div class="value">
+
+        <div class="value-icon">⚡</div>
+
+        <strong>
+            Quality<br>
+            Execution
+        </strong>
+
+    </div>
+
+
+    <div class="value">
+
+        <div class="value-icon">🛡</div>
+
+        <strong>
+            Safety<br>
+            First
+        </strong>
+
+    </div>
+
+
+    <div class="value">
+
+        <div class="value-icon">⚙</div>
+
+        <strong>
+            Experienced<br>
+            Team
+        </strong>
+
+    </div>
+
+
+    <div class="value">
+
+        <div class="value-icon">🌱</div>
+
+        <strong>
+            Sustainable<br>
+            Solutions
+        </strong>
+
+    </div>
+
+
+    <div class="value">
+
+        <div class="value-icon">🤝</div>
+
+        <strong>
+            Long Term<br>
+            Partnership
+        </strong>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     TWO COMPANIES
+========================== -->
+
+<section class="companies" id="about">
+
+    <div class="container">
+
+        <div class="company-cards">
+
+
+            <!-- NAROTTAM -->
+
+            <div class="company-card nc">
+
+                <div class="company-card-header">
+
+                    <img
+                        src="images/nc-logo.png"
+                        class="company-card-logo"
+                        alt=""
+                    >
+
+                    <div>
+                        <h2>NAROTTAM CHATURVEDI</h2>
+                        <h3>Construction & Electrical Infrastructure</h3>
+                    </div>
+
+                </div>
+
+                <p>
+                    We undertake construction works, HT/LT line erection,
+                    substation installation and colony electrification
+                    projects with quality, safety and timely execution.
+                </p>
+
+                <ul class="service-list">
+
+                    <li>
+                        <span>🏢</span>
+                        Building Construction
+                    </li>
+
+                    <li>
+                        <span>⚡</span>
+                        HT/LT Transmission Lines
+                    </li>
+
+                    <li>
+                        <span>🔌</span>
+                        Substation Works
+                    </li>
+
+                    <li>
+                        <span>🏠</span>
+                        Colony Electrification
+                    </li>
+
+                    <li>
+                        <span>⚙</span>
+                        Electrical Installation & Erection
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- SHRI SIDH TRANSFORMER & ENGINEERING -->
+
+            <div class="company-card sx">
+
+                <div class="company-card-header">
+
+                    <img
+                        src="images/sidhxmer-logo.png"
+                        class="company-card-logo"
+                        alt=""
+                    >
+
+                    <div>
+                        <h2>SHRI SIDH TRANSFORMER & ENGINEERING</h2>
+                        <h3>Solar & Transformer Solutions</h3>
+                    </div>
+
+                </div>
+
+                <p>
+                    We provide end-to-end solar solutions and reliable
+                    transformer services for industries, commercial
+                    and institutional needs.
+                </p>
+
+                <ul class="service-list">
+
+                    <li>
+                        <span>☀</span>
+                        Solar EPC & Rooftop Solutions
+                    </li>
+
+                    <li>
+                        <span>🔋</span>
+                        Solar Power Plants
+                    </li>
+
+                    <li>
+                        <span>⚡</span>
+                        Transformer Supply
+                    </li>
+
+                    <li>
+                        <span>🔧</span>
+                        Transformer Repair & Servicing
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Testing & Commissioning
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================== -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Our Major Services</h2>
+
+            <p>
+                Complete construction, electrical, solar and transformer
+                solutions under one roof.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <div class="service-box">
+
+                <div class="service-image construction"></div>
+
+                <div class="service-content">
+
+                    <h3>Construction Works</h3>
+
+                    <p>
+                        Residential | Commercial | Industrial
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <div class="service-image transmission"></div>
+
+                <div class="service-content">
+
+                    <h3>HT/LT Line Erection</h3>
+
+                    <p>
+                        Safe | Reliable | Efficient
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <div class="service-image substation"></div>
+
+                <div class="service-content">
+
+                    <h3>Substation Installation</h3>
+
+                    <p>
+                        11 KV / 33 KV / 132 KV
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <div class="service-image colony"></div>
+
+                <div class="service-content">
+
+                    <h3>Colony Electrification</h3>
+
+                    <p>
+                        Better Communities | Brighter Future
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <div class="service-image solar"></div>
+
+                <div class="service-content">
+
+                    <h3>Solar Solutions</h3>
+
+                    <p>
+                        Rooftop | Ground Mount | EPC
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <div class="service-image transformer"></div>
+
+                <div class="service-content">
+
+                    <h3>Transformer Solutions</h3>
+
+                    <p>
+                        Supply | Repair | Servicing
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY CHOOSE US
+========================== -->
+
+<section class="why-us">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Why Choose Us?</h2>
+
+            <p>
+                Professional execution backed by experience,
+                skilled teams and long-term support.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-box">
+
+                <div class="why-icon">★</div>
+
+                <h3>Proven Experience</h3>
+
+                <p>
+                    Industry experience and dependable execution.
+                </p>
+
+            </div>
+
+
+            <div class="why-box">
+
+                <div class="why-icon">👥</div>
+
+                <h3>Skilled & Dedicated Team</h3>
+
+                <p>
+                    Experienced professionals focused on quality.
+                </p>
+
+            </div>
+
+
+            <div class="why-box">
+
+                <div class="why-icon">⏱</div>
+
+                <h3>On-Time Delivery</h3>
+
+                <p>
+                    Planned execution with timely completion.
+                </p>
+
+            </div>
+
+
+            <div class="why-box">
+
+                <div class="why-icon">₹</div>
+
+                <h3>Competitive Pricing</h3>
+
+                <p>
+                    Cost-effective solutions without compromise.
+                </p>
+
+            </div>
+
+
+            <div class="why-box">
+
+                <div class="why-icon">♧</div>
+
+                <h3>After-Sales Support</h3>
+
+                <p>
+                    Reliable support even after project completion.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================== -->
+
+<!-- =========================
+     OUR PROJECTS
+========================== -->
+
+<!-- =========================
+     OUR PROJECTS
+========================== -->
+
+<section class="projects" id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Our Projects</h2>
+
+            <p>
+                Our project details and work portfolio
+            </p>
+
+        </div>
+
+        <div class="excel-wrapper">
+
+            <iframe
+                src="projects.html"
+                class="excel-frame">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================== -->
+
+<section class="about">
+
+    <div class="container about-grid">
+
+        <div class="about-image"></div>
+
+        <div class="about-text">
+
+            <h2>Building Stronger Tomorrow</h2>
+
+            <p>
+                M/S Narottam Chaturvedi and SHRI SIDH TRANSFORMER & ENGINEERING bring together
+                expertise across construction, electrical infrastructure,
+                renewable energy and transformer solutions.
+            </p>
+
+            <p>
+                Our objective is to provide dependable, safe and
+                sustainable solutions while maintaining high standards
+                of execution and customer satisfaction.
+            </p>
+
+            <ul class="check-list">
+
+                <li>Quality-focused project execution</li>
+
+                <li>Safety-first working approach</li>
+
+                <li>Experienced technical professionals</li>
+
+                <li>Complete end-to-end solutions</li>
+
+                <li>Long-term customer relationships</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================== -->
+
+<section id="gallery">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Project Gallery</h2>
+
+            <p>
+                A glimpse of our work across construction,
+                electrical and solar infrastructure.
+            </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <img src="images/gallery1.jpg" alt="">
+            </div>
+
+            <div class="project-card">
+                <img src="images/gallery2.jpg" alt="">
+            </div>
+
+            <div class="project-card">
+                <img src="images/gallery3.jpg" alt="">
+            </div>
+
+            <div class="project-card">
+                <img src="images/gallery4.jpg" alt="">
+            </div>
+
+            <div class="project-card">
+                <img src="images/gallery5.jpg" alt="">
+            </div>
+
+            <div class="project-card">
+                <img src="images/gallery6.jpg" alt="">
+            </div>
+			
+			<div class="project-card">
+                <img src="images/gallery7.jpg" alt="">
+            </div>
+			
+			<div class="project-card">
+                <img src="images/gallery8.jpg" alt="">
+            </div>
+			
+			<div class="project-card">
+                <img src="images/gallery9.jpg" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CERTIFICATIONS
+========================== -->
+
+<section class="services" id="certifications">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Certifications & Compliance</h2>
+
+            <p>
+                Our commitment to quality, safety and professional standards.
+            </p>
+
+        </div>
+
+
+        <div class="company-cards">
+
+            <div class="company-card nc">
+
+                <h2>Quality & Safety</h2>
+
+                <p>
+                    We follow professional safety practices and
+                    quality standards throughout our projects.
+                </p>
+
+            </div>
+
+
+            <div class="company-card sx">
+
+                <h2>Solar & Electrical Standards</h2>
+
+                <p>
+                    Our solutions are designed with reliability,
+                    efficiency and applicable industry standards in mind.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================== -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Let's Work Together</h2>
+
+            <p>
+                Tell us about your requirement and our team will
+                get back to you.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info">
+
+                <h2>Contact Us</h2>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">📍</div>
+
+                    <div>
+                        <strong>Office</strong>
+                        <span>INFRONT OF CIVIL LINE 33/11 kv SS  BESIDE PRATHAM HOTEL SATNA 485001</span>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">☎</div>
+
+                    <div>
+                        <strong>Phone</strong>
+                        <span>+91 8839869336 / +91 9685593179</span>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">✉</div>
+
+                    <div>
+                        <strong>Email</strong>
+                        <span>shrisidhtransformer@gmail.com/chaturvedinarottam623@gmail.com</span>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">⚡</div>
+
+                    <div>
+                        <strong>Business</strong>
+                        <span>
+                            Construction | Electrical | Solar | Transformer
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form class="contact-form" onsubmit="submitForm(event)">
+
+                <h2>Request a Quote</h2>
+
+
+                <div class="form-group">
+
+                    <input
+                        type="text"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <input
+                        type="tel"
+                        placeholder="Mobile Number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <input
+                        type="email"
+                        placeholder="Email Address"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <select required>
+
+                        <option value="">
+                            Select Service
+                        </option>
+
+                        <option>
+                            Construction Works
+                        </option>
+
+                        <option>
+                            HT/LT Line Erection
+                        </option>
+
+                        <option>
+                            Substation Installation
+                        </option>
+
+                        <option>
+                            Colony Electrification
+                        </option>
+
+                        <option>
+                            Solar Solutions
+                        </option>
+
+                        <option>
+                            Transformer Solutions
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <textarea
+                        placeholder="Tell us about your requirement..."
+                    ></textarea>
+
+                </div>
+
+
+                <button class="submit-btn" type="submit">
+                    Send Enquiry →
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="container footer-main">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                NAROTTAM CHATURVEDI
+                <span style="color:#f5b600;">&</span>
+                SHRI SIDH TRANSFORMER & ENGINEERING
+            </h2>
+
+            <p>
+                Integrated construction, electrical, solar and
+                transformer solutions for a stronger and more
+                sustainable tomorrow.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About Us</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Services</h3>
+
+            <a href="#services">Construction</a>
+
+            <a href="#services">HT/LT Lines</a>
+
+            <a href="#services">Substations</a>
+
+            <a href="#services">Solar EPC</a>
+
+            <a href="#services">Transformers</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <a href="tel:+91-8839869336 / +91-9685593179">
+                +91-8839869336 / +91-9685593179
+            </a>
+
+            <a href="mailto: shrisidhtransformer@gmail.com / chaturvedinarottam623@gmail.com">
+                shrisidhtransformer@gmail.com / chaturvedinarottam623@gmail.com
+            </a>
+
+            <a href="#">
+                INFRONT OF CIVIL LINE 33/11 kv SS  BESIDE PRATHAM HOTEL SATNA 485001
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <span>
+            © 2025 Narottam Chaturvedi | M/S SHRI SIDH TRANSFORMER & ENGINEERING
+        </span>
+
+        <span>
+            All Rights Reserved.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function toggleMenu() {
+
+    const menu =
+        document.getElementById("navLinks");
+
+    menu.classList.toggle("show");
+
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+function submitForm(event) {
+
+    event.preventDefault();
+
+    alert(
+        "Thank you! Your enquiry has been received. Our team will contact you shortly."
+    );
+
+}
+
+
+/* =========================
+   CLOSE MOBILE MENU
+========================= */
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            document
+                .getElementById("navLinks")
+                .classList.remove("show");
+
+        });
+
+    });
+
+
+/* =========================
+   HERO IMAGE SLIDER
+========================= */
+
+const heroImages = [
+
+    "images/hero1.jpg",
+
+    "images/hero2.jpg"
+
+    
+
+];
+
+
+let heroIndex = 0;
+
+const heroImage =
+    document.getElementById("heroImage");
+
+const sliderDots =
+    document.getElementById("sliderDots");
+
+
+/* =========================
+   CREATE SLIDER DOTS
+========================= */
+
+heroImages.forEach((image, index) => {
+
+    const dot =
+        document.createElement("button");
+
+    dot.className = "slider-dot";
+
+
+    if (index === 0) {
+
+        dot.classList.add("active");
+
+    }
+
+
+    dot.onclick = function() {
+
+        heroIndex = index;
+
+        updateHero();
+
+        restartAutoSlider();
+
+    };
+
+
+    sliderDots.appendChild(dot);
+
+});
+
+
+/* =========================
+   CHANGE IMAGE
+========================= */
+
+function updateHero() {
+
+    heroImage.style.opacity = "0";
+
+
+    setTimeout(() => {
+
+        heroImage.src =
+            heroImages[heroIndex];
+
+        heroImage.style.opacity = "1";
+
+    }, 300);
+
+
+    document
+        .querySelectorAll(".slider-dot")
+        .forEach((dot, index) => {
+
+            dot.classList.toggle(
+                "active",
+                index === heroIndex
+            );
+
+        });
+
+}
+
+
+/* =========================
+   NEXT IMAGE
+========================= */
+
+function nextHero() {
+
+    heroIndex++;
+
+    if (
+        heroIndex >=
+        heroImages.length
+    ) {
+
+        heroIndex = 0;
+
+    }
+
+    updateHero();
+
+}
+
+
+/* =========================
+   PREVIOUS IMAGE
+========================= */
+
+function previousHero() {
+
+    heroIndex--;
+
+    if (heroIndex < 0) {
+
+        heroIndex =
+            heroImages.length - 1;
+
+    }
+
+    updateHero();
+
+}
+
+
+/* =========================
+   AUTO SLIDER
+   EVERY 5 SECONDS
+========================= */
+
+let autoSlider =
+    setInterval(
+        nextHero,
+        5000
+    );
+
+
+/* =========================
+   RESTART AUTO SLIDER
+========================= */
+
+function restartAutoSlider() {
+
+    clearInterval(autoSlider);
+
+    autoSlider =
+        setInterval(
+            nextHero,
+            5000
+        );
+
+}
+
+
+/* =========================
+   TOUCH / SWIPE
+========================= */
+
+let touchStartX = 0;
+
+let touchEndX = 0;
+
+
+document
+    .querySelector(".hero-slider")
+    .addEventListener(
+        "touchstart",
+        function(event) {
+
+            touchStartX =
+                event.changedTouches[0].screenX;
+
+        }
+    );
+
+
+document
+    .querySelector(".hero-slider")
+    .addEventListener(
+        "touchend",
+        function(event) {
+
+            touchEndX =
+                event.changedTouches[0].screenX;
+
+
+            if (
+                touchEndX <
+                touchStartX - 50
+            ) {
+
+                nextHero();
+
+            }
+
+
+            if (
+                touchEndX >
+                touchStartX + 50
+            ) {
+
+                previousHero();
+
+            }
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM Surya Ghar – Solar Project Calculator</title>
+<meta name="description" content="PM Surya Ghar Solar Project Calculator – estimate solar capacity, roof area, modules, generation, project cost, CFA subsidy, savings and payback.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,"Noto Sans Devanagari",sans-serif;background:#f4f8fc;color:#173b62;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+
+/* Header */
+.top-header{background:#fff;border-bottom:1px solid #e2e9f1}
+.brand-header{display:flex;align-items:center;gap:22px;padding:9px 0}
+.company-banner{flex:1;min-width:0}
+.company-banner img{width:100%;max-height:120px;object-fit:contain;object-position:left center;display:block}
+.contact-top{width:360px;flex-shrink:0;display:flex;flex-direction:column;gap:5px;font-size:12px;color:#073b70}
+.contact-top div{display:flex;gap:8px;align-items:flex-start}
+.contact-icon{color:#e5aa00;font-weight:800}
+.tagline{width:160px;flex-shrink:0;text-align:center;color:#073b70;font-family:Poppins,sans-serif;font-style:italic;font-weight:700;font-size:15px;line-height:1.4}
+
+/* Nav */
+.navbar{background:#073b70;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.12);position:sticky;top:0;z-index:100}
+.nav-inner{min-height:58px;display:flex;align-items:center;justify-content:space-between}
+.nav-links{list-style:none;display:flex;align-items:center;gap:2px}
+.nav-links>li{position:relative}
+.nav-links>li>a{display:block;padding:16px 19px;font-weight:700;font-size:14px}
+.nav-links>li>a:hover,.nav-links>li>a.active{background:#f4b900;color:#082f58}
+.quote-btn{background:#f4b900;color:#082f58;padding:11px 19px;border-radius:8px;font-weight:800;font-size:13px}
+.mobile-menu{display:none;font-size:25px;cursor:pointer}
+
+/* Dropdown */
+.dropdown-menu,.sub-dropdown-menu{display:none;list-style:none;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,.18)}
+.dropdown-menu{position:absolute;top:100%;left:0;min-width:235px;padding:7px 0;border-radius:0 0 8px 8px}
+.dropdown-menu a{display:block;padding:11px 17px;background:#fff;color:#073b70;font-size:13px;font-weight:700;white-space:nowrap}
+.dropdown-menu a:hover{background:#f4b900;color:#082f58}
+.nav-links li.dropdown:hover>.dropdown-menu{display:block}
+.sub-dropdown{position:relative}
+.sub-dropdown-menu{position:absolute;top:-7px;left:100%;min-width:205px;padding:7px 0;border-radius:0 8px 8px 8px}
+.sub-dropdown:hover>.sub-dropdown-menu{display:block}
+.dropdown-arrow{float:right;margin-left:18px;font-size:17px}
+
+/* Hero */
+.page-hero{background:linear-gradient(135deg,rgba(4,55,103,.96),rgba(8,91,151,.93)),url("images/hero3.jpg") center/cover;color:#fff;text-align:center;padding:48px 0}
+.page-hero h1{font-family:Poppins,"Noto Sans Devanagari",sans-serif;font-size:clamp(28px,5vw,46px);line-height:1.25}
+.page-hero h1 span{color:#f5b600}
+.page-hero p{margin:9px auto 0;color:#e8f2fb;max-width:850px;font-size:15px}
+
+/* Calculator */
+.calculator-section{padding:42px 0 60px}
+.calc-grid{display:grid;grid-template-columns:390px 1fr;gap:25px;align-items:start}
+.card{background:#fff;border:1px solid #dfe8f1;border-radius:17px;box-shadow:0 7px 25px rgba(7,59,112,.07)}
+.form-card{padding:25px}
+.form-card h2,.results-card h2{color:#073b70;font-family:Poppins,"Noto Sans Devanagari",sans-serif;font-size:23px;margin-bottom:5px}
+.subtext{color:#71849a;font-size:13px;margin-bottom:20px}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:13px;font-weight:700;color:#274e72;margin-bottom:6px}
+.field input,.field select{width:100%;height:45px;border:1px solid #cbd8e5;border-radius:8px;padding:0 12px;font-size:15px;color:#173b62;background:#fff;outline:none}
+.field input:focus,.field select:focus{border-color:#f0b500;box-shadow:0 0 0 3px rgba(245,182,0,.13)}
+.field small{display:block;color:#7c8ea1;font-size:11px;margin-top:4px}
+.actions{display:flex;gap:9px;margin-top:20px}
+.btn{border:0;border-radius:8px;padding:12px 17px;font-weight:800;cursor:pointer;font-size:13px}
+.btn-primary{background:#f5b600;color:#073b70;flex:1}
+.btn-secondary{background:#eaf1f7;color:#073b70}
+.message{min-height:20px;margin-top:10px;font-size:12px;color:#b56c00}
+
+/* Results */
+.results-card{padding:25px}
+.result-highlight{background:linear-gradient(135deg,#073b70,#0867a5);border-radius:14px;padding:23px;color:#fff;margin:18px 0 20px}
+.result-highlight .label{font-size:12px;color:#d9eaf7;text-transform:uppercase;letter-spacing:.5px}
+.result-highlight .big{font-size:38px;line-height:1.2;font-weight:800;margin:4px 0}
+.result-highlight .small{font-size:12px;color:#dcebf7}
+.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.result-box{border:1px solid #e0e8ef;border-radius:11px;padding:14px;background:#fbfdff}
+.result-box .r-label{font-size:11px;color:#70849a;margin-bottom:3px}
+.result-box .r-value{font-size:19px;font-weight:800;color:#073b70}
+.result-box .r-note{font-size:10px;color:#8393a3;margin-top:2px}
+.calculation-note{background:#fff8df;border-left:4px solid #f5b600;border-radius:8px;padding:13px 15px;margin-top:17px;color:#6a5718;font-size:12px}
+.breakdown{margin-top:20px;border-top:1px solid #e4ebf2;padding-top:18px}
+.breakdown h3{font-size:16px;color:#073b70;margin-bottom:9px}
+.breakdown-row{display:flex;justify-content:space-between;gap:15px;padding:7px 0;border-bottom:1px dashed #e2e8ee;font-size:13px}
+.breakdown-row strong{color:#073b70;text-align:right}
+
+/* Info */
+.info-section{margin-top:25px}
+.info-section h2{font-family:Poppins,"Noto Sans Devanagari",sans-serif;color:#073b70;font-size:23px;margin-bottom:13px}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.info-box{padding:18px;background:#fff;border:1px solid #e0e8ef;border-radius:12px}
+.info-box h3{font-size:15px;color:#073b70;margin-bottom:6px}
+.info-box p{font-size:12px;color:#61778e}
+
+/* Footer */
+footer{background:#062e55;color:#fff;margin-top:10px}
+.footer-main{padding:35px 0;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px}
+.footer-main h3{color:#f5b600;font-size:14px;margin-bottom:9px}
+.footer-main p,.footer-main a{color:#cbd9e5;font-size:12px}
+.footer-main a{display:block;margin-bottom:6px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.15);padding:13px 0;color:#bdccda;font-size:11px;display:flex;justify-content:space-between}
+
+/* Mobile */
+@media(max-width:1000px){
+.contact-top{width:320px}.tagline{display:none}.calc-grid{grid-template-columns:1fr}
+}
+@media(max-width:800px){
+.brand-header{flex-wrap:wrap;justify-content:center}.company-banner{flex:100%;width:100%}.company-banner img{max-height:100px;object-position:center}
+.contact-top{width:100%;align-items:center;text-align:center}
+.mobile-menu{display:block}.nav-inner{padding:8px 0}
+.nav-links{display:none;position:absolute;top:58px;left:0;width:100%;background:#073b70;flex-direction:column;align-items:stretch}
+.nav-links.show{display:flex}.nav-links>li,.nav-links>li>a{width:100%}.nav-links>li>a{padding:13px 20px}
+.dropdown-menu,.sub-dropdown-menu{position:static;width:100%;min-width:100%;box-shadow:none;border-radius:0;padding:0}
+.dropdown-menu a{background:#062f59;color:#fff;padding-left:35px}.sub-dropdown-menu a{background:#052746;color:#fff;padding-left:55px}
+.nav-links li.dropdown:hover>.dropdown-menu,.sub-dropdown:hover>.sub-dropdown-menu{display:block}
+.quote-btn{display:none}.result-grid{grid-template-columns:1fr 1fr}.info-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:550px){
+.page-hero{padding:38px 0}.page-hero h1{font-size:27px}.calculator-section{padding:25px 0 40px}
+.form-card,.results-card{padding:19px}.result-grid{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}
+.footer-main{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:5px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="top-header">
+<div class="container brand-header">
+<div class="company-banner">
+<img src="images/company-header.jpg" alt="Narottam Chaturvedi and Shri Sidh Transformer">
+</div>
+<div class="contact-top">
+<div><span class="contact-icon">☎</span>+91 8839869336 / +91 9685593179</div>
+<div><span class="contact-icon">✉</span>shrisidhtransformer@gmail.com / chaturvedinarottam623@gmail.com</div>
+<div><span class="contact-icon">📍</span>INFRONT OF CIVIL LINE 33/11 KV SS BESIDE PRATHAM HOTEL, SATNA 485001</div>
+</div>
+<div class="tagline">Your Trusted<br>Partner<br>in Energy &<br>Infrastructure</div>
+</div>
+</header>
+
+<nav class="navbar">
+<div class="container nav-inner">
+<div class="mobile-menu" id="mobileMenu">☰</div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#about">About Us</a></li>
+<li><a href="index.html#services">Our Services</a></li>
+<li class="dropdown">
+<a href="javascript:void(0);">Schemes ▾</a>
+<ul class="dropdown-menu">
+<li class="sub-dropdown">
+<a href="javascript:void(0);">PM Surya Ghar Yojana <span class="dropdown-arrow">›</span></a>
+<ul class="sub-dropdown-menu">
+<li><a href="about-scheme.html">About Scheme</a></li>
+<li><a href="solar-calculator.html" class="active">Calculator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="index.html#projects">Projects</a></li>
+<li><a href="index.html#gallery">Gallery</a></li>
+<li><a href="index.html#certifications">Certifications</a></li>
+<li><a href="index.html#contact">Contact Us</a></li>
+</ul>
+<a href="index.html#contact" class="quote-btn">Get a Quote →</a>
+</div>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<h1>☀️ PM SURYA GHAR – <span>SOLAR PROJECT CALCULATOR</span></h1>
+<p>अपने घर के लिए अनुमानित Solar Capacity, Roof Area, Modules, Generation, Project Cost, CFA, Saving और Payback जानें।</p>
+</div>
+</section>
+
+<main class="calculator-section">
+<div class="container">
+
+<div class="calc-grid">
+
+<section class="card form-card">
+<h2>अपनी जानकारी भरें</h2>
+<p class="subtext">नीचे की जानकारी बदलते ही अनुमान अपडेट किया जा सकता है।</p>
+
+<form id="calcForm" novalidate>
+
+<div class="field">
+<label for="bill">Average Monthly Electricity Bill (₹)</label>
+<input id="bill" type="number" min="0" step="100" value="3000" inputmode="decimal">
+<small>पिछले कुछ महीनों के औसत बिल का अनुमान दें।</small>
+</div>
+
+<div class="field">
+<label for="roof">Available Roof Area (sq.ft)</label>
+<input id="roof" type="number" min="0" step="10" value="800" inputmode="decimal">
+<small>यदि उपलब्ध नहीं है तो 0 डाल सकते हैं।</small>
+</div>
+
+<div class="field">
+<label for="tariff">Electricity Tariff (₹ / unit)</label>
+<input id="tariff" type="number" min="0.01" step="0.10" value="7" inputmode="decimal">
+</div>
+
+<div class="field">
+<label for="module">Solar Module Capacity (W)</label>
+<select id="module">
+<option value="540">540 W</option>
+<option value="550">550 W</option>
+<option value="575">575 W</option>
+<option value="600">600 W</option>
+</select>
+</div>
+
+<div class="field">
+<label for="cost">Estimated Project Cost (₹ / kW)</label>
+<input id="cost" type="number" min="0" step="1000" value="60000" inputmode="decimal">
+<small>यह calculator estimate है; actual vendor/DISCOM quote अलग हो सकता है।</small>
+</div>
+
+<div class="field">
+<label for="generation">Estimated Generation (units / kW / year)</label>
+<input id="generation" type="number" min="1" step="10" value="1400" inputmode="decimal">
+<small>Site, location, shadow, orientation और system performance से actual generation बदल सकती है।</small>
+</div>
+
+<div class="field">
+<label for="roofPerKw">Roof Area Required (sq.ft / kW)</label>
+<input id="roofPerKw" type="number" min="1" step="1" value="100" inputmode="decimal">
+</div>
+
+<div class="field">
+<label for="selfUse">Solar Generation Used for Bill Offset (%)</label>
+<input id="selfUse" type="number" min="0" max="100" step="1" value="85" inputmode="decimal">
+<small>बाकी generation को grid/export rules के अनुसार अलग treatment मिल सकता है।</small>
+</div>
+
+<div class="actions">
+<button type="submit" class="btn btn-primary">Calculate Estimate</button>
+<button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
+</div>
+
+<div class="message" id="message" aria-live="polite"></div>
+</form>
+</section>
+
+<section class="card results-card" aria-live="polite">
+<h2>📊 Your Solar Estimate</h2>
+<p class="subtext">यह अनुमानित calculation है, final project proposal नहीं।</p>
+
+<div class="result-highlight">
+<div class="label">Recommended Solar Capacity</div>
+<div class="big" id="capacity">—</div>
+<div class="small" id="capacityNote">—</div>
+</div>
+
+<div class="result-grid">
+<div class="result-box">
+<div class="r-label">🔲 Required Roof Area</div>
+<div class="r-value" id="roofResult">—</div>
+<div class="r-note">sq.ft</div>
+</div>
+
+<div class="result-box">
+<div class="r-label">🔌 Number of Solar Modules</div>
+<div class="r-value" id="modulesResult">—</div>
+<div class="r-note" id="moduleNote">—</div>
+</div>
+
+<div class="result-box">
+<div class="r-label">⚡ Estimated Annual Generation</div>
+<div class="r-value" id="generationResult">—</div>
+<div class="r-note">units / year</div>
+</div>
+
+<div class="result-box">
+<div class="r-label">💰 Estimated Project Cost</div>
+<div class="r-value" id="costResult">—</div>
+<div class="r-note">before CFA estimate</div>
+</div>
+
+<div class="result-box">
+<div class="r-label">🏛️ Applicable PM Surya Ghar CFA</div>
+<div class="r-value" id="cfaResult">—</div>
+<div class="r-note">central CFA estimate</div>
+</div>
+
+<div class="result-box">
+<div class="r-label">📉 Estimated Electricity Saving</div>
+<div class="r-value" id="savingResult">—</div>
+<div class="r-note">per year</div>
+</div>
+
+<div class="result-box">
+<div class="r-label">⏱️ Estimated Payback Period</div>
+<div class="r-value" id="paybackResult">—</div>
+<div class="r-note">after estimated CFA</div>
+</div>
+
+<div class="result-box">
+<div class="r-label">🔋 Estimated Net Cost</div>
+<div class="r-value" id="netCostResult">—</div>
+<div class="r-note">project cost − CFA</div>
+</div>
+</div>
+
+<div class="breakdown">
+<h3>Calculation Breakdown</h3>
+<div class="breakdown-row"><span>Annual electricity bill</span><strong id="annualBill">—</strong></div>
+<div class="breakdown-row"><span>Estimated annual consumption</span><strong id="annualConsumption">—</strong></div>
+<div class="breakdown-row"><span>Capacity based on consumption</span><strong id="capacityByConsumption">—</strong></div>
+<div class="breakdown-row"><span>Capacity allowed by roof area</span><strong id="capacityByRoof">—</strong></div>
+<div class="breakdown-row"><span>Generation used for bill offset</span><strong id="offsetGeneration">—</strong></div>
+</div>
+
+<div class="calculation-note">
+<strong>Important:</strong> CFA, savings, generation, project cost and payback shown here are estimates. Actual eligibility, approved capacity, subsidy, DISCOM process, tariff, net-metering/export arrangement, vendor price and final generation depend on applicable rules and site conditions.
+</div>
+</section>
+
+</div>
+
+<section class="info-section">
+<h2>☀️ Calculator में क्या-क्या calculate होता है?</h2>
+<div class="info-grid">
+<div class="info-box">
+<h3>Recommended Capacity</h3>
+<p>Monthly bill और tariff से estimated annual consumption निकाला जाता है और selected generation factor के आधार पर capacity estimate की जाती है।</p>
+</div>
+<div class="info-box">
+<h3>Roof Area & Modules</h3>
+<p>Selected system capacity और roof-area assumption से required roof area तथा selected module wattage के अनुसार modules की संख्या निकाली जाती है।</p>
+</div>
+<div class="info-box">
+<h3>CFA & Payback</h3>
+<p>Supplied PM Surya Ghar CFA slabs के आधार पर subsidy estimate, फिर estimated savings से net project cost और payback estimate निकाला जाता है।</p>
+</div>
+</div>
+</section>
+
+</div>
+</main>
+
+<footer>
+<div class="container footer-main">
+<div>
+<h3>NAROTTAM CHATURVEDI & SHRI SIDH</h3>
+<p>Construction, electrical infrastructure, solar and transformer solutions.</p>
+</div>
+<div>
+<h3>Quick Links</h3>
+<a href="index.html">Home</a>
+<a href="about-scheme.html">About Scheme</a>
+<a href="solar-calculator.html">Solar Calculator</a>
+</div>
+<div>
+<h3>Contact</h3>
+<a href="tel:+918839869336">+91 8839869336</a>
+<a href="tel:+919685593179">+91 9685593179</a>
+<a href="mailto:shrisidhtransformer@gmail.com">shrisidhtransformer@gmail.com</a>
+</div>
+</div>
+<div class="container footer-bottom">
+<span>© 2025 Narottam Chaturvedi | Shri Sidh Transformer & Engineering</span>
+<span>All Rights Reserved.</span>
+</div>
+</footer>
+
+<script>
+(function(){
+    const $ = id => document.getElementById(id);
+
+    const inputs = {
+        bill: $("bill"),
+        roof: $("roof"),
+        tariff: $("tariff"),
+        module: $("module"),
+        cost: $("cost"),
+        generation: $("generation"),
+        roofPerKw: $("roofPerKw"),
+        selfUse: $("selfUse")
+    };
+
+    const fmtINR = n => {
+        if (!Number.isFinite(n)) return "—";
+        return new Intl.NumberFormat("en-IN", {
+            style: "currency",
+            currency: "INR",
+            maximumFractionDigits: 0
+        }).format(Math.max(0,n));
+    };
+
+    const fmtNum = (n, digits=0) => {
+        if (!Number.isFinite(n)) return "—";
+        return new Intl.NumberFormat("en-IN", {
+            maximumFractionDigits: digits
+        }).format(Math.max(0,n));
+    };
+
+    const clamp = (n,min,max) => Math.min(max,Math.max(min,n));
+
+    function calculate(e){
+        if(e) e.preventDefault();
+
+        const bill = Number(inputs.bill.value);
+        const roof = Number(inputs.roof.value);
+        const tariff = Number(inputs.tariff.value);
+        const moduleW = Number(inputs.module.value);
+        const costPerKw = Number(inputs.cost.value);
+        const generationPerKw = Number(inputs.generation.value);
+        const roofPerKw = Number(inputs.roofPerKw.value);
+        const selfUse = clamp(Number(inputs.selfUse.value),0,100);
+
+        const values = [bill,roof,tariff,moduleW,costPerKw,generationPerKw,roofPerKw,selfUse];
+
+        if(values.some(v => !Number.isFinite(v) || v < 0) || tariff <= 0 || moduleW <= 0 || generationPerKw <= 0 || costPerKw < 0 || roofPerKw <= 0){
+            $("message").textContent = "कृपया सभी values सही और 0 से अधिक भरें (roof area 0 हो सकता है)।";
+            return;
+        }
+
+        $("message").textContent = "";
+
+        /* Annual consumption estimated from bill / tariff */
+        const annualBill = bill * 12;
+        const monthlyUnits = bill / tariff;
+        const annualUnits = monthlyUnits * 12;
+
+        /* Capacity needed to generate estimated annual consumption */
+        const capacityByConsumption = annualUnits / generationPerKw;
+
+        /* Roof constraint */
+        const capacityByRoof = roof > 0 ? roof / roofPerKw : Infinity;
+
+        /*
+         * Keep recommendation practical:
+         * choose consumption-based capacity, limited by roof area.
+         * Minimum display is 0.5 kW for a non-zero bill.
+         */
+        let capacity = bill > 0 ? capacityByConsumption : 0;
+        if(Number.isFinite(capacityByRoof)){
+            capacity = Math.min(capacity, capacityByRoof);
+        }
+        capacity = Math.max(0, Math.min(capacity, 20));
+
+        /* Round to 0.1 kW */
+        capacity = Math.round(capacity * 10) / 10;
+
+        const requiredRoof = capacity * roofPerKw;
+        const modules = capacity > 0 ? Math.ceil((capacity * 1000) / moduleW) : 0;
+        const annualGeneration = capacity * generationPerKw;
+
+        /* CFA supplied by the user's requested slab */
+        let cfa = 0;
+        if(capacity <= 2){
+            cfa = capacity * 30000;
+        } else if(capacity <= 3){
+            cfa = 60000 + (capacity - 2) * 18000;
+        } else {
+            cfa = 78000;
+        }
+        cfa = Math.min(78000, Math.max(0,cfa));
+
+        const projectCost = capacity * costPerKw;
+        const netCost = Math.max(0, projectCost - cfa);
+
+        /* Bill offset estimate based on generation and self-use */
+        const offsetUnits = Math.min(annualGeneration * (selfUse/100), annualUnits);
+        const annualSaving = offsetUnits * tariff;
+        const payback = annualSaving > 0 ? netCost / annualSaving : Infinity;
+
+        $("capacity").textContent = capacity > 0 ? fmtNum(capacity,1) + " kW" : "0 kW";
+        $("capacityNote").textContent = Number.isFinite(capacityByRoof)
+            ? "Consumption estimate limited by available roof area."
+            : "Based on estimated annual electricity consumption.";
+
+        $("roofResult").textContent = fmtNum(requiredRoof,0);
+        $("modulesResult").textContent = fmtNum(modules,0);
+        $("moduleNote").textContent = moduleW + " W modules";
+        $("generationResult").textContent = fmtNum(annualGeneration,0);
+        $("costResult").textContent = fmtINR(projectCost);
+        $("cfaResult").textContent = fmtINR(cfa);
+        $("savingResult").textContent = fmtINR(annualSaving);
+        $("netCostResult").textContent = fmtINR(netCost);
+        $("paybackResult").textContent = Number.isFinite(payback) ? fmtNum(payback,1) + " years" : "—";
+
+        $("annualBill").textContent = fmtINR(annualBill);
+        $("annualConsumption").textContent = fmtNum(annualUnits,0) + " units";
+        $("capacityByConsumption").textContent = fmtNum(capacityByConsumption,2) + " kW";
+        $("capacityByRoof").textContent = Number.isFinite(capacityByRoof) ? fmtNum(capacityByRoof,2) + " kW" : "No roof limit";
+        $("offsetGeneration").textContent = fmtNum(offsetUnits,0) + " units/year";
+
+        if(capacityByRoof < capacityByConsumption){
+            $("message").textContent = "नोट: उपलब्ध roof area के कारण recommended capacity सीमित की गई है।";
+        }
+    }
+
+    $("calcForm").addEventListener("submit", calculate);
+
+    $("resetBtn").addEventListener("click", function(){
+        inputs.bill.value = 3000;
+        inputs.roof.value = 800;
+        inputs.tariff.value = 7;
+        inputs.module.value = 540;
+        inputs.cost.value = 60000;
+        inputs.generation.value = 1400;
+        inputs.roofPerKw.value = 100;
+        inputs.selfUse.value = 85;
+        calculate();
+    });
+
+    Object.values(inputs).forEach(input => {
+        input.addEventListener("input", calculate);
+        input.addEventListener("change", calculate);
+    });
+
+    $("mobileMenu").addEventListener("click", function(){
+        $("navLinks").classList.toggle("show");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link=>{
+        link.addEventListener("click",()=>{
+            $("navLinks").classList.remove("show");
+        });
+    });
+
+    calculate();
+})();
+</script>
+
+</body>
+</html>

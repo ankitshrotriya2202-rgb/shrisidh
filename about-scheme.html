@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM Surya Ghar Yojana | Narottam Chaturvedi & Shri Sidh</title>
+<meta name="description" content="पीएम सूर्य घर योजना, सब्सिडी, फायदे और Solar Calculator की जानकारी।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans Devanagari","Inter",sans-serif;color:#173b62;background:#f5f8fc;line-height:1.75}
+a{text-decoration:none;color:inherit}
+.container{width:min(1200px,92%);margin:auto}
+
+/* HEADER */
+.top-header{background:#fff;border-bottom:1px solid #e3eaf2}
+.brand-header{display:flex;align-items:center;gap:24px;padding:10px 0}
+.company-banner{flex:1;min-width:0}
+.company-banner img{width:100%;max-height:125px;object-fit:contain;object-position:left center;display:block}
+.contact-top{width:360px;flex-shrink:0;display:flex;flex-direction:column;gap:6px;font-family:Inter,sans-serif;font-size:12px;color:#073b70}
+.contact-top div{display:flex;align-items:flex-start;gap:8px}
+.contact-icon{color:#e6a900;font-weight:800}
+.tagline{width:165px;flex-shrink:0;text-align:center;color:#073b70;font-family:Poppins,sans-serif;font-size:16px;font-weight:700;font-style:italic;line-height:1.4}
+
+/* NAV */
+.navbar{background:#073b70;color:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 4px 15px rgba(0,0,0,.12)}
+.nav-inner{min-height:58px;display:flex;align-items:center;justify-content:space-between}
+.nav-links{display:flex;align-items:center;gap:3px;list-style:none}
+.nav-links>li{position:relative}
+.nav-links>li>a{display:block;padding:16px 20px;font-family:Inter,sans-serif;font-size:14px;font-weight:700;transition:.25s}
+.nav-links>li>a:hover,.nav-links>li>a.active{background:#f4b900;color:#082f58}
+.dropdown-menu,.sub-dropdown-menu{list-style:none;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,.18);display:none}
+.dropdown-menu{position:absolute;top:100%;left:0;min-width:235px;padding:7px 0;border-radius:0 0 8px 8px}
+.dropdown-menu a{display:block;padding:11px 17px;color:#073b70;background:#fff;font-size:13px;font-weight:700;white-space:nowrap}
+.dropdown-menu a:hover{background:#f4b900;color:#082f58}
+.nav-links li.dropdown:hover>.dropdown-menu{display:block}
+.sub-dropdown{position:relative}
+.sub-dropdown-menu{position:absolute;top:-7px;left:100%;min-width:205px;padding:7px 0;border-radius:0 8px 8px 8px}
+.sub-dropdown:hover>.sub-dropdown-menu{display:block}
+.dropdown-arrow{float:right;font-size:17px;margin-left:18px}
+.quote-btn{background:#f4b900;color:#082f58;padding:11px 20px;border-radius:8px;font-family:Inter,sans-serif;font-weight:800;font-size:13px}
+.mobile-menu{display:none;font-size:25px;cursor:pointer}
+
+/* PAGE HERO */
+.page-hero{background:linear-gradient(135deg,rgba(4,55,103,.96),rgba(8,91,151,.92)),url("images/hero3.jpg") center/cover;color:#fff;padding:60px 0;text-align:center}
+.page-hero h1{font-family:Poppins,"Noto Sans Devanagari",sans-serif;font-size:clamp(29px,5vw,50px);line-height:1.3;font-weight:800;margin-bottom:10px}
+.page-hero h1 span{color:#f5b600}
+.page-hero p{max-width:800px;margin:auto;color:#e5f0fa;font-size:16px}
+
+/* CONTENT */
+.scheme-content{padding:55px 0}
+.content-card{background:#fff;border-radius:18px;padding:34px;margin-bottom:24px;border:1px solid #e0e8f0;box-shadow:0 7px 25px rgba(7,59,112,.07)}
+.intro-card{border-top:5px solid #f5b600}
+.content-card h2{color:#073b70;font-family:Poppins,"Noto Sans Devanagari",sans-serif;font-size:27px;line-height:1.4;margin-bottom:17px}
+.content-card h3{color:#073b70;font-size:18px;margin:20px 0 6px}
+.content-card p{color:#536a82;font-size:15px;margin-bottom:13px}
+.content-card strong{color:#173b62}
+
+/* TABLE */
+.table-wrap{width:100%;overflow-x:auto;margin:20px 0 10px;border-radius:10px;border:1px solid #dce5ee}
+table{width:100%;min-width:500px;border-collapse:collapse;background:#fff}
+th{background:#073b70;color:#fff;padding:13px 16px;text-align:left;font-size:14px}
+td{padding:12px 16px;border-top:1px solid #e5ebf1;color:#405a73;font-size:14px}
+tr:nth-child(even) td{background:#f7faff}
+.note{background:#fff8df;border-left:4px solid #f5b600;padding:15px 18px;border-radius:8px;color:#67551d;font-size:13px;margin-top:18px}
+
+/* BENEFITS */
+.benefit{padding:17px 20px;margin:12px 0;background:#f7faff;border-left:4px solid #0b609c;border-radius:8px}
+.benefit h3{margin:0 0 5px;font-size:17px}
+.benefit p{margin:0}
+
+/* CALCULATOR */
+.calculator-card{background:linear-gradient(135deg,#073b70,#0867a5);color:#fff;text-align:center;padding:40px 28px;border-radius:18px;margin-top:24px;box-shadow:0 10px 30px rgba(7,59,112,.18)}
+.calculator-card h2{color:#fff;margin-bottom:8px}
+.calculator-card p{color:#e5f1fa;max-width:760px;margin:0 auto 15px}
+.calculator-points{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:900px;margin:24px auto}
+.calculator-point{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:12px 8px;font-size:13px}
+.calculator-btn{display:inline-block;background:#f5b600;color:#073b70;padding:13px 26px;border-radius:8px;font-weight:800;font-family:Inter,sans-serif;transition:.25s}
+.calculator-btn:hover{background:#fff;transform:translateY(-2px)}
+.estimate-btn{display:inline-block;margin-top:16px;border:2px solid #fff;color:#fff;padding:9px 21px;border-radius:8px;font-weight:700}
+
+/* FOOTER */
+footer{background:#062e55;color:#fff;margin-top:20px}
+.footer-main{padding:42px 0;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:35px}
+.footer-brand h2{font-family:Poppins,"Noto Sans Devanagari",sans-serif;font-size:19px;margin-bottom:9px}
+.footer-brand p,.footer-column a{color:#c9d8e6;font-size:13px}
+.footer-column h3{color:#f5b600;font-size:15px;margin-bottom:12px}
+.footer-column a{display:block;margin-bottom:7px}
+.footer-column a:hover{color:#f5b600}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.15);padding:15px 0;display:flex;justify-content:space-between;gap:15px;color:#bdccda;font-size:12px}
+
+/* MOBILE */
+@media(max-width:1000px){
+.contact-top{width:320px}.tagline{display:none}.calculator-points{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:800px){
+.brand-header{flex-wrap:wrap;justify-content:center}.company-banner{flex:100%;width:100%}.company-banner img{max-height:105px;object-position:center}
+.contact-top{width:100%;align-items:center;text-align:center}
+.mobile-menu{display:block}.nav-inner{padding:9px 0}
+.nav-links{display:none;position:absolute;top:58px;left:0;width:100%;background:#073b70;flex-direction:column;align-items:stretch}
+.nav-links.show{display:flex}.nav-links>li,.nav-links>li>a{width:100%}.nav-links>li>a{padding:13px 20px}
+.dropdown-menu,.sub-dropdown-menu{position:static;width:100%;min-width:100%;box-shadow:none;border-radius:0;padding:0}
+.dropdown-menu a{background:#062f59;color:#fff;padding-left:35px}.sub-dropdown-menu a{background:#052746;color:#fff;padding-left:55px}
+.nav-links li.dropdown:hover>.dropdown-menu,.sub-dropdown:hover>.sub-dropdown-menu{display:block}
+.quote-btn{display:none}.page-hero{padding:45px 0}.page-hero p{font-size:14px}
+.scheme-content{padding:30px 0}.content-card{padding:23px 18px;border-radius:13px}.content-card h2{font-size:21px}.content-card p{font-size:14px}
+}
+@media(max-width:550px){
+.page-hero h1{font-size:27px}.scheme-content{padding:22px 0}.calculator-card{padding:29px 16px}
+.calculator-points{grid-template-columns:1fr}.footer-main{grid-template-columns:1fr}.footer-bottom{flex-direction:column}
+}
+</style>
+</head>
+
+<body>
+
+<header class="top-header">
+<div class="container brand-header">
+<div class="company-banner">
+<img src="images/company-header.jpg" alt="Narottam Chaturvedi and Shri Sidh Transformer">
+</div>
+<div class="contact-top">
+<div><span class="contact-icon">☎</span>+91 8839869336 / +91 9685593179</div>
+<div><span class="contact-icon">✉</span>shrisidhtransformer@gmail.com / chaturvedinarottam623@gmail.com</div>
+<div><span class="contact-icon">📍</span>INFRONT OF CIVIL LINE 33/11 KV SS BESIDE PRATHAM HOTEL, SATNA 485001</div>
+</div>
+<div class="tagline">Your Trusted<br>Partner<br>in Energy &<br>Infrastructure</div>
+</div>
+</header>
+
+<nav class="navbar">
+<div class="container nav-inner">
+<div class="mobile-menu" onclick="toggleMenu()">☰</div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#about">About Us</a></li>
+<li><a href="index.html#services">Our Services</a></li>
+<li class="dropdown">
+<a href="javascript:void(0);">Schemes ▾</a>
+<ul class="dropdown-menu">
+<li class="sub-dropdown">
+<a href="javascript:void(0);">PM Surya Ghar Yojana <span class="dropdown-arrow">›</span></a>
+<ul class="sub-dropdown-menu">
+<li><a href="about-scheme.html" class="active">About Scheme</a></li>
+<li><a href="solar-calculator.html">Calculator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="index.html#projects">Projects</a></li>
+<li><a href="index.html#gallery">Gallery</a></li>
+<li><a href="index.html#certifications">Certifications</a></li>
+<li><a href="index.html#contact">Contact Us</a></li>
+</ul>
+<a href="index.html#contact" class="quote-btn">Get a Quote →</a>
+</div>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<h1>☀️ पीएम सूर्य घर <span>योजना</span></h1>
+<p>मुफ्त बिजली योजना और रूफटॉप सोलर के बारे में महत्वपूर्ण जानकारी</p>
+</div>
+</section>
+
+<main class="scheme-content">
+<div class="container">
+
+<section class="content-card intro-card">
+<h2>☀️ पीएम सूर्य घर योजना क्या है?</h2>
+<p>पीएम सूर्य घर: मुफ्त बिजली योजना भारत सरकार की एक महत्वपूर्ण योजना है, जिसका उद्देश्य घरों की छतों पर रूफटॉप सोलर सिस्टम लगाकर परिवारों को अपनी बिजली स्वयं बनाने के लिए प्रोत्साहित करना है।</p>
+<p>इस योजना के अंतर्गत पात्र घरेलू (Residential) बिजली उपभोक्ता अपने घर की छत पर सोलर पैनल लगवा सकते हैं और निर्धारित नियमों के अनुसार Central Financial Assistance (CFA) / सरकारी सब्सिडी प्राप्त कर सकते हैं।</p>
+</section>
+
+<section class="content-card">
+<h2>💰 कितनी सब्सिडी मिल सकती है?</h2>
+<p>वर्तमान केंद्रीय योजना के अनुसार घरेलू उपभोक्ताओं के लिए CFA की गणना इस प्रकार है:</p>
+<p><strong>पहले 2 kW तक:</strong> ₹30,000 प्रति kW</p>
+<p><strong>2 kW से 3 kW के बीच अतिरिक्त क्षमता:</strong> ₹18,000 प्रति kW</p>
+<p><strong>3 kW या उससे अधिक सिस्टम के लिए अधिकतम केंद्रीय CFA:</strong> ₹78,000</p>
+<h3>उदाहरण:</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Solar Plant</th><th>अधिकतम केंद्रीय CFA</th></tr></thead>
+<tbody>
+<tr><td>1 kW</td><td>₹30,000</td></tr>
+<tr><td>2 kW</td><td>₹60,000</td></tr>
+<tr><td>3 kW</td><td>₹78,000</td></tr>
+<tr><td>4 kW</td><td>₹78,000</td></tr>
+<tr><td>5 kW</td><td>₹78,000</td></tr>
+</tbody>
+</table>
+</div>
+<div class="note"><strong>नोट:</strong> वास्तविक CFA योजना की पात्रता, स्वीकृत सिस्टम, DISCOM प्रक्रिया और लागू सरकारी दिशा-निर्देशों के अनुसार निर्धारित होती है।</div>
+</section>
+
+<section class="content-card">
+<h2>⚡ Solar लगाने के क्या फायदे हैं?</h2>
+<div class="benefit"><h3>1. बिजली के बिल में कमी</h3><p>आप अपने घर की छत पर बिजली का उत्पादन करके अपने घरेलू बिजली खर्च को कम कर सकते हैं।</p></div>
+<div class="benefit"><h3>2. अपनी बिजली, अपनी छत</h3><p>दिन के समय सोलर सिस्टम से उत्पन्न बिजली का उपयोग घर की आवश्यकताओं के लिए किया जा सकता है।</p></div>
+<div class="benefit"><h3>3. अतिरिक्त बिजली का लाभ</h3><p>लागू नियमों और DISCOM की व्यवस्था के अनुसार अतिरिक्त बिजली को ग्रिड में भेजने की सुविधा उपलब्ध हो सकती है।</p></div>
+<div class="benefit"><h3>4. लंबे समय का निवेश</h3><p>अच्छी गुणवत्ता के Solar PV System का उपयोग कई वर्षों तक किया जा सकता है, जिससे लंबे समय में बिजली खर्च कम करने में सहायता मिल सकती है।</p></div>
+</section>
+
+<section class="content-card">
+<h2>🏠 कितनी छत की जगह चाहिए?</h2>
+<p>सोलर सिस्टम के लिए आवश्यक जगह मुख्य रूप से Solar Module की Wattage, Module के आकार, Mounting Structure, Tilt Angle, Row Spacing और Shadow Clearance पर निर्भर करती है।</p>
+<p>हमारा Solar Calculator आपकी:</p>
+<p><strong>Roof Area + Electricity Consumption + Tariff + Module Capacity</strong> के आधार पर अनुमानित Solar Plant Capacity, आवश्यक जगह, अनुमानित Generation, Project Cost, Subsidy और Payback Period निकालने में सहायता करता है।</p>
+</section>
+
+<section class="calculator-card">
+<h2>📊 हमारा Solar Calculator</h2>
+<p>अपनी जानकारी भरें और तुरंत जानें:</p>
+<p><strong>आपके घर के लिए कितना Solar System उचित हो सकता है?</strong></p>
+<div class="calculator-points">
+<div class="calculator-point">☀️ Recommended Solar Capacity</div>
+<div class="calculator-point">🔲 Required Roof Area</div>
+<div class="calculator-point">🔌 Number of Solar Modules</div>
+<div class="calculator-point">⚡ Estimated Annual Generation</div>
+<div class="calculator-point">💰 Estimated Project Cost</div>
+<div class="calculator-point">🏛️ Applicable PM Surya Ghar CFA</div>
+<div class="calculator-point">📉 Estimated Electricity Saving</div>
+<div class="calculator-point">⏱️ Estimated Payback Period</div>
+</div>
+<a href="solar-calculator.html" class="calculator-btn">Open Solar Calculator →</a>
+<br>
+<a href="index.html#contact" class="estimate-btn">📞 अपने घर के लिए Solar Estimate प्राप्त करें</a>
+</section>
+
+</div>
+</main>
+
+<footer>
+<div class="container footer-main">
+<div class="footer-brand">
+<h2>NAROTTAM CHATURVEDI <span style="color:#f5b600;">&</span> SHRI SIDH TRANSFORMER & ENGINEERING</h2>
+<p>Integrated construction, electrical, solar and transformer solutions for a stronger and more sustainable tomorrow.</p>
+</div>
+<div class="footer-column">
+<h3>Quick Links</h3>
+<a href="index.html">Home</a>
+<a href="index.html#about">About Us</a>
+<a href="index.html#services">Services</a>
+<a href="about-scheme.html">PM Surya Ghar Yojana</a>
+<a href="solar-calculator.html">Solar Calculator</a>
+</div>
+<div class="footer-column">
+<h3>Contact</h3>
+<a href="tel:+918839869336">+91 8839869336</a>
+<a href="tel:+919685593179">+91 9685593179</a>
+<a href="mailto:shrisidhtransformer@gmail.com">shrisidhtransformer@gmail.com</a>
+<a href="index.html#contact">Satna, Madhya Pradesh</a>
+</div>
+</div>
+<div class="container footer-bottom">
+<span>© 2025 Narottam Chaturvedi | Shri Sidh Transformer & Engineering</span>
+<span>All Rights Reserved.</span>
+</div>
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+}
+document.querySelectorAll(".nav-links a").forEach(link=>{
+    link.addEventListener("click",()=>{
+        document.getElementById("navLinks").classList.remove("show");
+    });
+});
+</script>
+
+</body>
+</html>
